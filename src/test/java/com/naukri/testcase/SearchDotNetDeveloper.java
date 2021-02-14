@@ -46,14 +46,15 @@ public class SearchDotNetDeveloper extends BaseClass {
 	    Thread.sleep(3000);
 	    driver.findElement(By.xpath("//input[@id='qsb-keyskill-sugg']")).click();
 	    driver.findElement(By.xpath("//input[@id='qsb-keyskill-sugg']")).sendKeys(Keys.TAB);
-	    driver.findElement(By.xpath("//*[@id=\"qsb-location-sugg\"]")).sendKeys("Bangalore");
+	    driver.findElement(By.xpath("//*[@id=\"qsb-location-sugg\"]")).sendKeys("Bangalore,Hyderabad,Pune");
 	    driver.findElement(By.xpath("//*[@id=\"search-jobs\"]/button")).click();
 	    Thread.sleep(3000);
 	    String jobresult = driver.getTitle();
 	    wait.until(ExpectedConditions.titleContains(jobresult));
 	    Thread.sleep(5000);
-	    
-	    for(int i = 1 ; i <= 20; i++)
+	    for (int j=1 ;j<=20;j++)
+	    {
+	    for(int i = 1 ; i <=20; i++)
 	    {   
 	    WebElement article = driver.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article["+i+"]/div[1]"));
 	    	js.executeScript("arguments[0].scrollIntoView(true);",article);
@@ -61,9 +62,9 @@ public class SearchDotNetDeveloper extends BaseClass {
 	    String jobprofile =  driver.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article["+i+"]/div[1]/div[1]/a")).getAttribute("title");
 	    System.out.println(jobprofile); 
 	    Thread.sleep(3000);
-	    if (jobprofile.contains(".NET") || jobprofile.contains("Dot Net") || jobprofile.contains("DotNet") || jobprofile.contains(".net"))
+	    if (jobprofile.contains(".NET") || jobprofile.contains("Dot Net") || jobprofile.contains("DotNet") || jobprofile.contains(".net")|| jobprofile.contains(".Net"))
 	    {
-	    	String jobtype = driver.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[1]/div[3]/div[1]/span")).getText();
+	    	String jobtype = driver.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article["+1+"]/div[3]/div[1]/span")).getText();
 	    	if(jobtype.contains("HOT JOB") || jobtype.contains("PREFERRED")) {
 	    	driver.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article["+i+"]/div[3]")).click();
 	    	}
@@ -91,6 +92,10 @@ public class SearchDotNetDeveloper extends BaseClass {
 	    
 	    	}
 	}
+	    
+	    driver.findElement(By.xpath("//a[@class='fright fs14 btn-secondary br2']")).click();
+	    Thread.sleep(2000);
+	    }
 	}
 
 	
