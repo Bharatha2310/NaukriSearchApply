@@ -69,9 +69,7 @@ public class SearchTestEngineer extends BaseClass {
 				js.executeScript("arguments[0].scrollIntoView(true);", article);
 				Thread.sleep(5000);
 				String jobprofile = driver
-						.findElement(By.xpath(
-								"//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[" + i + "]/div[1]/div[1]/a"))
-						.getAttribute("title");
+						.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[" + i + "]/div[1]/div[1]/a")).getAttribute("title");
 				System.out.println(jobprofile);
 				Thread.sleep(3000);
 				if (jobprofile.contains("Test Engineer") || jobprofile.contains("QA") || jobprofile.contains("Manual")
@@ -103,11 +101,8 @@ public class SearchTestEngineer extends BaseClass {
 
 				}
 			}
-
 			naukri.naukri_Pagination();
 			Thread.sleep(2000);
 		}
-		
 	}
-
 }
