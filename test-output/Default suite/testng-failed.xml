@@ -5,6 +5,7 @@
     <classes>
       <class name="com.naukri.testcase.SearchTestEngineer">
         <methods>
+          <include name="tearDown"/>
           <include name="searchDotNet"/>
           <include name="launchBrowser"/>
         </methods>

@@ -56,4 +56,11 @@ Properties pro;
 			String ps = pro.getProperty("profilesearch");
 			return ps;
 		}
+		
+		//Getting Naukri location
+		public String getNaukriLocation()
+		{
+			String loc = pro.getProperty("location");
+			return loc;
+		}
 }

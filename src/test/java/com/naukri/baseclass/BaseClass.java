@@ -26,14 +26,13 @@ public class BaseClass {
 	public String email = read_config.getEmail();
 	public String password = read_config.getPassword();
 	public String profilesearch = read_config.getProfileSearch();
+	public String loation = read_config.getNaukriLocation();
 	public static WebDriver driver;
 	public static Logger logger;
 	
 	@BeforeClass
 	public void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver",read_config.getChromepath());
-		//ChromeOptions option = new ChromeOptions();
-		//option.addArguments("--disable-notifications");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("excludeSwitches", "disable-popup-blocking");
 		driver =  new ChromeDriver();
@@ -44,7 +43,7 @@ public class BaseClass {
 			
 	}
 	
-	//@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();

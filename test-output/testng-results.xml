@@ -2,36 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-16T16:02:43 IST" name="Default suite" finished-at="2022-04-16T16:04:03 IST" duration-ms="79612">
+  <suite started-at="2022-07-03T14:06:32 IST" name="Default suite" finished-at="2022-07-03T14:07:00 IST" duration-ms="28805">
     <groups>
     </groups>
-    <test started-at="2022-04-16T16:02:43 IST" name="Default test" finished-at="2022-04-16T16:04:03 IST" duration-ms="79612">
+    <test started-at="2022-07-03T14:06:32 IST" name="Default test" finished-at="2022-07-03T14:07:00 IST" duration-ms="28805">
       <class name="com.naukri.testcase.SearchTestEngineer">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.naukri.testcase.SearchTestEngineer@4f2b503c]" started-at="2022-04-16T16:02:43 IST" name="launchBrowser" finished-at="2022-04-16T16:02:45 IST" duration-ms="1122" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.naukri.testcase.SearchTestEngineer@bae7dc0]" started-at="2022-07-03T14:06:32 IST" name="launchBrowser" finished-at="2022-07-03T14:06:33 IST" duration-ms="1152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="searchDotNet()[pri:0, instance:com.naukri.testcase.SearchTestEngineer@4f2b503c]" started-at="2022-04-16T16:02:45 IST" name="searchDotNet" finished-at="2022-04-16T16:04:03 IST" duration-ms="78468" status="FAIL">
+        <test-method signature="searchDotNet()[pri:0, instance:com.naukri.testcase.SearchTestEngineer@bae7dc0]" started-at="2022-07-03T14:06:33 IST" name="searchDotNet" finished-at="2022-07-03T14:07:00 IST" duration-ms="27547" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[chrome not reachable
-  (Session info: chrome=100.0.4896.127)
+  (Session info: chrome=103.0.5060.66)
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-L052HB9', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+System info: host: 'DESKTOP-L052HB9', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Bharatha\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51184}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f3991fdaba931f81ea6e64887ef5fd14
-*** Element info: {Using=xpath, value=//*[@id="root"]/div[3]/div[2]/section[2]/div[2]/article[1]/div[3]/div[1]/span}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Bharatha\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54484}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 734cbb9ebff2ffc36410ab41ec777f9f]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=100.0.4896.127)
+  (Session info: chrome=103.0.5060.66)
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-L052HB9', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+System info: host: 'DESKTOP-L052HB9', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Bharatha\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51184}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f3991fdaba931f81ea6e64887ef5fd14
-*** Element info: {Using=xpath, value=//*[@id="root"]/div[3]/div[2]/section[2]/div[2]/article[1]/div[3]/div[1]/span}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Bharatha\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54484}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 734cbb9ebff2ffc36410ab41ec777f9f
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -43,11 +41,8 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-at com.naukri.testcase.SearchTestEngineer.searchDotNet(SearchTestEngineer.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:899)
+at com.naukri.testcase.SearchTestEngineer.searchDotNet(SearchTestEngineer.java:86)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -82,6 +77,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchDotNet -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.naukri.testcase.SearchTestEngineer@bae7dc0]" started-at="2022-07-03T14:07:00 IST" name="tearDown" finished-at="2022-07-03T14:07:00 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.naukri.testcase.SearchTestEngineer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
