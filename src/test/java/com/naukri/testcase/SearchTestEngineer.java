@@ -14,6 +14,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.naukri.baseclass.BaseClass;
 import com.naukri.pageobject.NaukriPage;
 
@@ -22,7 +25,11 @@ import ch.qos.logback.classic.Logger;
 public class SearchTestEngineer extends BaseClass {
 
 	@Test
-	public void searchDotNet() throws AWTException, InterruptedException {
+	public void searchTestEngineer() throws AWTException, InterruptedException {
+		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
+		ExtentReports extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		ExtentTest naukriTest = extent.createTest("Search Job for Test Engineer","This is automatic job apply");
 		NaukriPage naukri = new NaukriPage(driver);
 		driver.get(baseUrl);
 		logger.info("Entering the valid data in naukri website");
@@ -43,17 +50,19 @@ public class SearchTestEngineer extends BaseClass {
 		logger.info("Clicking on the login");
 		naukri.naukriEmailPassLogin();
 		logger.info("validating nuakri profile search");
+		naukriTest.pass("Login success");
 		String naukrihome = driver.getTitle();
 		wait.until(ExpectedConditions.titleContains(naukrihome));
 		logger.info("Enter the profile title and location ");
 		naukri.naukri_ProfileSearchClick();
 		naukri.naukri_ProfileSearch(profilesearch);
 		naukri.naukri_JobClick();
-		naukri.naukri_LocationSearch("Hyderabad,Mumbai,Pune");
+		naukri.naukri_LocationSearch(location);
 		naukri.naukri_JobClick();
+		extent.flush();
 		String jobresult = driver.getTitle();
 		wait.until(ExpectedConditions.titleContains(jobresult));
-		for (int j = 1; j <= 20; j++) {
+		for (int j = 1; j <= 1; j++) {
 			for (int i = 1; i <= 20; i++) {
 				WebElement article = driver.findElement(
 						By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[" + i + "]/div[1]"));
@@ -98,6 +107,7 @@ public class SearchTestEngineer extends BaseClass {
 			naukri.naukri_Pagination();
 			Thread.sleep(2000);
 		}
+		
 	}
 
 }

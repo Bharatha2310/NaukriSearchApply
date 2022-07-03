@@ -26,7 +26,7 @@ public class BaseClass {
 	public String email = read_config.getEmail();
 	public String password = read_config.getPassword();
 	public String profilesearch = read_config.getProfileSearch();
-	public String loation = read_config.getNaukriLocation();
+	public String location = read_config.getNaukriLocation();
 	public static WebDriver driver;
 	public static Logger logger;
 	
