@@ -98,7 +98,6 @@ public class SearchTestEngineer extends BaseClass {
 						String index = driver.getTitle();
 						System.out.println(index);
 					}
-
 				}
 			}
 			naukri.naukri_Pagination();
