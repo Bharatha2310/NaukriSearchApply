@@ -62,23 +62,24 @@ public class SearchTestEngineer extends BaseClass {
 		extent.flush();
 		String jobresult = driver.getTitle();
 		wait.until(ExpectedConditions.titleContains(jobresult));
-		for (int j = 1; j <= 1; j++) {
+		for (int j = 1; j <= 20; j++) {
 			for (int i = 1; i <= 20; i++) {
 				WebElement article = driver.findElement(
-						By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[" + i + "]/div[1]"));
+						By.xpath("//*[@id=\"root\"]/div[4]/div/section[2]/div[2]/article["+ i +"]/div[1]"));
 				js.executeScript("arguments[0].scrollIntoView(true);", article);
 				Thread.sleep(5000);
 				String jobprofile = driver
-						.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[" + i + "]/div[1]/div[1]/a")).getAttribute("title");
+						.findElement(By.xpath("//*[@id=\"root\"]/div[4]/div/section[2]/div[2]/article["+i+"]/div[1]/div/a")).getAttribute("title");
 				System.out.println(jobprofile);
 				Thread.sleep(3000);
 				if (jobprofile.contains("Test Engineer") || jobprofile.contains("QA") || jobprofile.contains("Manual")
 						|| jobprofile.contains("Test") || jobprofile.contains("Engineer")) {
 					String jobtype = driver.findElement(By.xpath(
-							"//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[" + 1 + "]/div[3]/div[1]/span"))
+							"//*[@id=\"root\"]/div[4]/div/section[2]/div[2]/article["+i+"]/div[1]/div/a"))
 							.getText();
+					Thread.sleep(5000);
 					driver.findElement(
-							By.xpath("//*[@id=\"root\"]/div[3]/div[2]/section[2]/div[2]/article[" + i + "]/div[3]"))
+							By.xpath("//*[@id=\"root\"]/div[4]/div/section[2]/div[2]/article["+ i +"]"))
 							.click();
 					Thread.sleep(5000);
 					for (String handle : driver.getWindowHandles()) {
@@ -87,10 +88,13 @@ public class SearchTestEngineer extends BaseClass {
 					String title = driver.getTitle();
 					System.out.println(title);
 					if (title.contains(jobprofile)) {
-						naukri.naukri_JobApply();
 						Thread.sleep(5000);
+						naukri.naukri_JobApply();
+						Thread.sleep(3000);
 						System.out.println("Applied Successfully");
+						Thread.sleep(3000);
 						driver.switchTo().window(tabs2.get(0));
+						Thread.sleep(3000);
 						String index = driver.getTitle();
 						System.out.println(index);
 					} else {
@@ -98,6 +102,7 @@ public class SearchTestEngineer extends BaseClass {
 						String index = driver.getTitle();
 						System.out.println(index);
 					}
+
 				}
 			}
 			naukri.naukri_Pagination();

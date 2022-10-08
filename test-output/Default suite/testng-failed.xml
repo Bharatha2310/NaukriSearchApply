@@ -6,7 +6,7 @@
       <class name="com.naukri.testcase.SearchTestEngineer">
         <methods>
           <include name="tearDown"/>
-          <include name="searchDotNet"/>
+          <include name="searchTestEngineer"/>
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- com.naukri.testcase.SearchTestEngineer -->

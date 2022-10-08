@@ -17,7 +17,7 @@ public class NaukriPage {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
-	    @FindBy(xpath="//div[normalize-space()='Login']")
+	    @FindBy(xpath="//*[@id=\"login_Layer\"]")
 	    @CacheLookup
 	    WebElement naukriLogin;
 	    
@@ -44,7 +44,7 @@ public class NaukriPage {
 	    	naukriPassword.sendKeys(nauPassword);
 	    }
 	    
-	    @FindBy(xpath="//button[normalize-space()='Login']")
+	    @FindBy(xpath="//*[@id=\"root\"]/div[4]/div[2]/div/div/div[2]/div/form/div[6]/button")
 	    @CacheLookup
 	    WebElement naukriEmailPassLogin;
 	    
